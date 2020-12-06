@@ -18,8 +18,7 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     CommonModule,
     CoffeeOrderRoutingModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+
   ],
   providers: [OrdersService]
 })

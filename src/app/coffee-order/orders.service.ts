@@ -19,11 +19,22 @@ export class OrdersService {
 
   createCoffeeOrder = data => new Promise<any>((resolve, reject) => {
     this.firestore
-      .collection('coffeeOrder')
+      .collection('coffeeOrders')
       .add(data)
       .then(res => {
       }, err => reject(err));
   })
 
   getCoffeeOrders = () => this.firestore.collection('coffeeOrders').snapshotChanges();
+  updateCoffeeOrder = data => {
+    return this.firestore
+      .collection('coffeeOrders')
+      .doc(data.payload.doc.id)
+      .set({ completed: true }, { merge: true });
+  }
+
+  deleteCoffeeOrder = data => this.firestore
+    .collection('coffeeOrders')
+    .doc(data.payload.doc.id)
+    .delete()
 }

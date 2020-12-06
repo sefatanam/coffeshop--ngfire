@@ -1,3 +1,4 @@
+/* tslint:disable:quotemark */
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
@@ -5,13 +6,14 @@
 export const environment = {
   production: false,
   firebaseConfig : {
-    apiKey: 'AIzaSyCHXKa03juCJb4pz5qTl0CE1Bb4pHQUYQY',
-    authDomain: 'firstexpo-bb19a.firebaseapp.com',
-    databaseURL: 'https://firstexpo-bb19a.firebaseio.com',
-    projectId: 'firstexpo-bb19a',
-    storageBucket: 'firstexpo-bb19a.appspot.com',
-    messagingSenderId: '225138639049',
-    appId: '1:225138639049:web:9053677eece5f81bb78d18'
+    apiKey: "AIzaSyCL3t1mCqymrCRpyc9kgdQjy5uFueq-Nps",
+    authDomain: "fir-mvcsample-66ba5.firebaseapp.com",
+    databaseURL: "https://fir-mvcsample-66ba5.firebaseio.com",
+    projectId: "fir-mvcsample-66ba5",
+    storageBucket: 'fir-mvcsample-66ba5.appspot.com',
+    messagingSenderId: "918552224582",
+    appId: '1:918552224582:web:88bdbbd368a664513d3b47',
+    measurementId: "G-2XZ80X8TW8"
   }
 };
 

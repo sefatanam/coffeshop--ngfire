@@ -1,0 +1,16 @@
+span{
+  background: #f0f0f0;
+  margin: 3px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+td{
+  cursor: pointer;
+}
+i.checked{
+  color: cadetblue;
+}
+i.delete{
+  color: indianred;
+}

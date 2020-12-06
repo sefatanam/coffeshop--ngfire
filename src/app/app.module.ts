@@ -13,6 +13,8 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

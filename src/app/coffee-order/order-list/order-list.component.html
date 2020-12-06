@@ -1,3 +1,13 @@
+
+<h2>Order List</h2>
+<table>
+<thead>
+<tr>
+  <th>SL</th>
+  <th>Name</th>
+  <th>Order Stack</th>
+</tr>
+</thead>
 <tbody>
 <tr *ngFor="let order of coffeeOrders">
   <td>{{ order.payload.doc.data().orderNumber }}</td>
@@ -7,5 +17,14 @@
        {{ coffee }}
       </span>
   </td>
+  <td [hidden]="order.payload.doc.data().completed"
+      (click)="markCompleted(order)">
+    <i class="material-icons checked">check</i>
+  </td>
+  <td [hidden]="order.payload.doc.data().completed"
+      (click)="deleteOrder(order)">
+    <i class="material-icons delete">delete_forever</i>
+  </td>
 </tr>
 </tbody>
+</table>
