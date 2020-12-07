@@ -7,18 +7,21 @@ import {OrdersService} from '../orders.service';
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent implements OnInit {
+  coffees = ['Americano', 'Flat White', 'Cappuccino', 'Latte', 'Espresso', 'Machiato', 'Mocha', 'Hot Chocolate', 'Tea'];
+  coffeeOrder = [];
+
   constructor(public ordersService: OrdersService) {
   }
-  coffees = ['Americano', 'Flat White', 'Cappuccino', 'Latte', 'Espresso', 'Machiato', 'Mocha', 'Hot Chocolate', 'Tea'];
-
-  coffeeOrder = [];
 
   ngOnInit(): void {
   }
+
   addCoffee = coffee => this.coffeeOrder.push(coffee);
   removeCoffee = coffee => {
     const index = this.coffeeOrder.indexOf(coffee);
-    if (index > -1) { this.coffeeOrder.splice(index, 1); }
+    if (index > -1) {
+      this.coffeeOrder.splice(index, 1);
+    }
   }
 
   onSubmit = () => {
@@ -27,8 +30,7 @@ export class OrdersComponent implements OnInit {
 
     this.ordersService.createCoffeeOrder(data)
       .then(res => {
-        /*do something here....
-        maybe clear the form or give a success message*/
+       this.ordersService.form.value.value.reset();
       });
   }
 }

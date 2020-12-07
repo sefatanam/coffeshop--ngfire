@@ -17,7 +17,10 @@ export class OrderListComponent implements OnInit {
     this.getCoffeeOrders();
   }
 
-  getCoffeeOrders = () => this.ordersService.getCoffeeOrders().subscribe(res => (this.coffeeOrders = res));
+  getCoffeeOrders = () => this.ordersService.getCoffeeOrders().subscribe(res => {
+    this.coffeeOrders = [];
+    this.coffeeOrders = res;
+  })
 
   markCompleted = data => this.ordersService.updateCoffeeOrder(data);
 

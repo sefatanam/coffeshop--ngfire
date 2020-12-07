@@ -7,9 +7,7 @@ import {OrdersComponent} from './orders/orders.component';
 import {OrderListComponent} from './order-list/order-list.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {OrdersService} from './orders.service';
-import {AngularFireModule} from '@angular/fire';
-import {environment} from '../../environments/environment';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
+
 
 
 @NgModule({
@@ -18,7 +16,6 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     CommonModule,
     CoffeeOrderRoutingModule,
     ReactiveFormsModule,
-
   ],
   providers: [OrdersService]
 })

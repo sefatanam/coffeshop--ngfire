@@ -5,10 +5,12 @@ import {AppRoutingModule} from './app-routing.module';
 import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -17,6 +19,7 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     AngularFirestoreModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports:[NavbarComponent]
 })
 export class AppModule { }
