@@ -6,11 +6,13 @@ import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,

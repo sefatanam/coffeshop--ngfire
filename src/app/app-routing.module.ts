@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {AppComponent} from './app.component';
+import {WelcomeComponent} from './welcome/welcome.component';
 const routes: Routes = [
+  { path: '', component: WelcomeComponent },
   { path: 'coffeeOrder', loadChildren: () => import('./coffee-order/coffee-order.module').then(m => m.CoffeeOrderModule) },
-  { path: '**', redirectTo: 'coffeeOrder' }
 ];
 
 @NgModule({
